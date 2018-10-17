@@ -1,0 +1,47 @@
+This is how easy it is to create a REST API
+
+https://codeburst.io/this-is-how-easy-it-is-to-create-a-rest-api-8a25122ab1f3
+
+
+Installation
+          pip install flask-restful
+
+Install one of these API testing tool:             Postman			This tool basically allows you to test your API endpoints, observe the responses.
+
+Implementation
+We will be creating a RESTful API that is used to store users details, which will have CRUD (Create, Read, Update, Delete) functions, allowing us to create new user, get details of existing user, update details of existing user and delete existing user.
+
+
+https://gist.github.com/leon-sleepinglion/97bfd34132394e23ca5905ec730f776a
+
+
+
+full code example in git-gist 
+
+
+
+
+
+
+**WORKING PROCESS**:
+
+pip install flask-restful
+python app.py
+install https://insomnia.rest/download/
+
+then in insomnia application 
+
+-create a Folder say 'Medium Tutorial' 
+then add request : for DEL PUT POST GET methods for <name>
+then you can have your attributes created accordingly 
+
+
+
+
+This is all in by Flask and Insomnia app .
+
+Thats it . Enjoyable Read
+
+
+
+
