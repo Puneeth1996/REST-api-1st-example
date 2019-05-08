@@ -1,0 +1,44 @@
+{
+    "user": "Puneeth",
+    "user_id": "9066339217",
+    "plans": [
+        {
+            "id": "1",
+            "name": "Plan1",
+            "price": {
+                "amount": 10,
+                "currency": "kwd"
+            },
+            "features": [
+                {
+                    "id": "1.1",
+                    "name": "Calls",
+                    "limit": {
+                        "amount": 100,
+                        "unit": "Minutes",
+                        "Balance": 100,
+                        "extraCharge": {
+                            "amount": "0.100",
+                            "currency": "kwd",
+                            "unit": "minute"
+                        }
+                    }
+                },
+                {
+                    "id": "1.2",
+                    "name": "SMS",
+                    "limit": {
+                        "amount": 250,
+                        "unit": "Messages",
+                        "Balance": 250,
+                        "extraCharge": {
+                            "amount": "0.025",
+                            "currency": "kwd",
+                            "unit": "message"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
