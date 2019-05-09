@@ -105,29 +105,19 @@ def user_plans_feature1(user_id):
     return jsonify({"Plans associated with: " + user_id: output })
 
 
-
 # 6 update the the same for above limits (api/$user_id/plan/feature1/limit/update)
 
-@app.route('/api/<path:user_id>/plan/feature1/limit/update', methods=['POST'])
-def user_plans_update_feature1(user_id):
+@app.route('/api/<path:user_id>/<path:plan_id>/feature1/limit/update', methods=['POST'])
+def user_plans_update_feature1(user_id,plan_id):
     output = []
     user_existing = user_plan.find_one({'user_id': user_id})
     if(user_existing):
-        features = user_existing['plans']
-        for val in features['features']:
-            o = {}
-            for v in val:
-                print
-                if(v != '_id'):
-                    o[v] = val[v]
-                print(o)
-            output.append(o)
-    
+        user_limit = user_existing['plans']['limit']
+	user_limit.update_one({'id': plan_id}, {"$set":request.json})
+	return ("the plan "+plan_id+" and for the "+user_id+"  was updated.")
     else:
-        print("Nothing")
-        output.append({Plans:"None At the moment..."})
-        
-    return jsonify({"Plans associated with: " + user_id: output })
+        return ("the "+user_id+" with "+plan_id+"  is not existing in the database...")
+
 
 
 if __name__ == '__main__':
